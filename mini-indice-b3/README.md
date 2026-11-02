@@ -1,14 +1,13 @@
 # Skill Mini Índice B3 (WIN)
 
-Skill modular para análise do contrato futuro de mini Ibovespa (WIN), microestrutura, fluxo, VWAP/TWAP, delta, volume, FVG/ICT, contexto macro, risco e pesquisa quantitativa.
+Skill modular para análise do contrato futuro de mini Ibovespa (WIN), microestrutura, fluxo, VWAP/TWAP, Cumulative Delta, volume, atividade versus deslocamento, FVG/ICT, contexto macro, risco e pesquisa quantitativa.
 
 ## Estrutura
 
 - `SKILL.md`: regras centrais e encaminhamento.
-- `references/`: conhecimento técnico por domínio, incluindo especificação matemática VWAP/TWAP.
-- `workflows/calculo-vwap-twap.md`: procedimento reproduzível para cálculo e auditoria das referências.
-- `workflows/`: procedimentos reproduzíveis.
-- `tests/`: avaliações de comportamento e critérios de aceitação.
+- `references/`: conhecimento técnico por domínio, incluindo especificações matemáticas de VWAP/TWAP e fluxo.
+- `workflows/`: procedimentos reproduzíveis de cálculo e análise.
+- `tests/`: avaliações comportamentais, fixtures e critérios de aceitação.
 
 ## Instalação
 
@@ -46,7 +45,13 @@ A Skill não fornece cotações por si só. A análise depende dos dados e ferra
 
 ## Validação
 
-Consulte `tests/casos-de-teste.md`, `tests/testes-vwap-twap.md` e `tests/checklist-validacao.md`. A validação documental da estrutura não equivale a avaliação empírica do modelo Claude; testes reais devem ser executados no ambiente em que a Skill será instalada.
+Consulte:
+- `tests/casos-de-teste.md`
+- `tests/testes-vwap-twap.md`
+- `tests/testes-fluxo-microestrutura.md`
+- `tests/checklist-validacao.md`
+
+A validação documental da estrutura não equivale a avaliação empírica do modelo Claude; testes reais devem ser executados no ambiente em que a Skill será instalada.
 
 ## Fontes institucionais iniciais
 
