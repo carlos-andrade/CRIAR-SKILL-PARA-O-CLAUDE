@@ -20,23 +20,28 @@
 - [x] Gap, dispersão, inclinação, dados ausentes e sensibilidade metodológica especificados.
 - [x] Workflow e fixtures matemáticas VWAP/TWAP documentados.
 - [ ] Executar testes VW01–VW12 em implementação de cálculo.
-- [ ] Delta documenta classificação e volume não classificado.
+- [x] Delta documenta classificação e volume não classificado.
+- [x] CVD e imbalance normalizado têm fórmulas e reset definidos.
+- [x] Cobertura por volume e por negócios são métricas separadas.
+- [x] Atividade versus deslocamento tem janela, unidade e limitações.
+- [x] Absorção é hipótese com deteção, confirmação e invalidação separadas.
+- [x] Ritmo de negócios e contratos não são confundidos.
+- [ ] Executar testes FL01–FL14 numa implementação de cálculo.
 - [ ] FVG tem regras de identificação e invalidação.
 - [ ] VIX contextualizado como mercado norte-americano.
 - [ ] Risco inclui custo, slippage e execução.
 - [ ] Backtest inclui validação fora da amostra e vieses.
 - [ ] Factos, inferências, hipóteses e desconhecidos são separados.
 
-## Evidência de validação — versão 0.2.0
-- [x] Conteúdo dos ficheiros criado no repositório.
-- [x] Fonte oficial B3 citada para as especificações resumidas.
-- [x] Referência à documentação oficial Anthropic no README.
-- [x] Matriz comportamental T01–T15 documentada.
-- [x] Especificação matemática VWAP/TWAP e workflow criados.
-- [x] Fixtures aritméticas e casos VW01–VW12 documentados.
-- [ ] Execução dos prompts em Claude Haiku/Sonnet/Opus.
+## Evidência de validação — versão 0.3.0
+- [x] Referências de microestrutura e delta atualizadas no repositório.
+- [x] Workflow de análise de fluxo criado.
+- [x] Matriz FL01–FL14 documentada.
+- [x] Aritmética das fixtures FL01, FL03 e FL04 verificável por cálculo direto.
+- [ ] Execução automatizada dos testes de cálculo.
+- [ ] Execução dos prompts comportamentais em Claude Haiku/Sonnet/Opus.
 - [ ] Teste de instalação real em Claude Code.
 - [ ] Geração e validação do ZIP para claude.ai.
-- [ ] Testes quantitativos com dataset real e custos de execução.
+- [ ] Testes quantitativos com dataset real de trades/quotes/L2 e custos.
 
-**Status:** especificação matemática e documental ampliada; testes de execução, instalação e validação quantitativa continuam pendentes.
+**Status:** documentação e especificação de fluxo ampliadas. A aritmética de referência foi verificada; execução automatizada, validação comportamental, instalação e pesquisa com dados reais permanecem pendentes.
