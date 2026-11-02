@@ -31,3 +31,9 @@ Criar uma Skill profissional para Claude especializada no mini índice futuro da
 Este é o primeiro registo. Não representa uma recuperação automática de todas as conversas anteriores do projeto. As novas sessões devem ser acrescentadas a este histórico, preservando o conteúdo existente.
 
 ---
+
+## 2026-11-02 — Verificação das instruções e organização do histórico
+
+- Registo da conversa: [2026-11-02-verificacao-instrucoes-e-organizacao-historico.md](2026-11-02-verificacao-instrucoes-e-organizacao-historico.md)
+- Tema: correção do local de verificação (campo **Instruções** do projeto ChatGPT), definição da política de arquivo das conversas e organização dos registos na pasta `CHATS/`.
+- Resultado: conversa arquivada; decisões e limitações documentadas no ficheiro individual.
