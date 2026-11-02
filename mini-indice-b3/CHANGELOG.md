@@ -24,3 +24,12 @@
 - Critérios de deteção, confirmação e invalidação de candidatos a absorção.
 - Workflow e matriz de testes específicos para fluxo/microestrutura.
 - Reforço da proibição de inferir intenção institucional a partir de métricas agregadas.
+
+## 0.4.0 — 2026-11-02
+
+- Separação metodológica entre VIX Cboe (S&P 500) e S&P/B3 Ibovespa VIX (VXBR).
+- Formalização da comparação IBOV–WIN por retornos sincronizados, beta e basis descritivo.
+- Inclusão de volatilidade realizada, dimensões de regime e critérios de classificação auditáveis.
+- Workflow para calendário macro, consenso point-in-time, realizado, revisão e surpresa.
+- Regras para timezone, timestamps, dados stale e prevenção de look-ahead.
+- Matriz MR01–MR18 para contexto macro e regimes.
