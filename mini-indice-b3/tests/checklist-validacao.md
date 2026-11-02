@@ -20,28 +20,34 @@
 - [x] Gap, dispersão, inclinação, dados ausentes e sensibilidade metodológica especificados.
 - [x] Workflow e fixtures matemáticas VWAP/TWAP documentados.
 - [ ] Executar testes VW01–VW12 em implementação de cálculo.
-- [x] Delta documenta classificação e volume não classificado.
-- [x] CVD e imbalance normalizado têm fórmulas e reset definidos.
+- [x] Delta, CVD, agressão e volume não classificado documentados.
 - [x] Cobertura por volume e por negócios são métricas separadas.
 - [x] Atividade versus deslocamento tem janela, unidade e limitações.
 - [x] Absorção é hipótese com deteção, confirmação e invalidação separadas.
-- [x] Ritmo de negócios e contratos não são confundidos.
 - [ ] Executar testes FL01–FL14 numa implementação de cálculo.
+- [x] VIX Cboe e VXBR diferenciados por subjacente e metodologia.
+- [x] IBOV versus WIN contextualizados com retornos sincronizados e basis.
+- [x] Volatilidade implícita e realizada distinguidas.
+- [x] Calendário macro inclui consenso, realizado, anterior, revisão e timezone.
+- [x] Dados point-in-time e prevenção de look-ahead especificados.
+- [x] Regimes exigem thresholds definidos no treino e avaliação fora da amostra.
+- [ ] Executar testes MR01–MR18 com séries point-in-time.
 - [ ] FVG tem regras de identificação e invalidação.
-- [ ] VIX contextualizado como mercado norte-americano.
 - [ ] Risco inclui custo, slippage e execução.
 - [ ] Backtest inclui validação fora da amostra e vieses.
 - [ ] Factos, inferências, hipóteses e desconhecidos são separados.
 
-## Evidência de validação — versão 0.3.0
-- [x] Referências de microestrutura e delta atualizadas no repositório.
-- [x] Workflow de análise de fluxo criado.
-- [x] Matriz FL01–FL14 documentada.
-- [x] Aritmética das fixtures FL01, FL03 e FL04 verificável por cálculo direto.
-- [ ] Execução automatizada dos testes de cálculo.
-- [ ] Execução dos prompts comportamentais em Claude Haiku/Sonnet/Opus.
+## Evidência documental — versão 0.4.0
+- [x] Referência de regimes de mercado criada.
+- [x] Workflow de contexto e regime criado.
+- [x] Testes MR01–MR18 documentados.
+- [x] Fontes institucionais B3, S&P DJI, Cboe, BCB e IBGE referenciadas.
+- [x] Distinção VIX Cboe versus VXBR explicitada.
+- [x] Fórmulas de surpresa, retorno, beta, basis e movimento aproximado de 30 dias documentadas.
+- [ ] Execução automatizada das fixtures e testes.
+- [ ] Execução dos prompts comportamentais em Claude.
 - [ ] Teste de instalação real em Claude Code.
 - [ ] Geração e validação do ZIP para claude.ai.
-- [ ] Testes quantitativos com dataset real de trades/quotes/L2 e custos.
+- [ ] Testes quantitativos com dados reais, custos e consensos point-in-time.
 
-**Status:** documentação e especificação de fluxo ampliadas. A aritmética de referência foi verificada; execução automatizada, validação comportamental, instalação e pesquisa com dados reais permanecem pendentes.
+**Status:** módulo de contexto/regime especificado e documentado. Não há validação empírica de desempenho nem ligação a feed em tempo real.
