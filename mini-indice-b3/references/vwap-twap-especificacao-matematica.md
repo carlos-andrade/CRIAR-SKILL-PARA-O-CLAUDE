@@ -36,9 +36,9 @@ A quantidade deve ser estritamente positiva e o denominador Σq_i maior que zero
 | 1 | 100.000 | 10 | 1.000.000 |
 | 2 | 100.010 | 20 | 2.000.200 |
 | 3 | 100.005 | 10 | 1.000.050 |
-| Total | — | 40 | 3.000.250 |
+| Total | — | 40 | 4.000.250 |
 
-VWAP = 3.000.250 / 40 = **100.006,25 pontos**.
+VWAP = 4.000.250 / 40 = **100.006,25 pontos**.
 
 Os números são ilustrativos e não representam cotação real do WIN.
 
