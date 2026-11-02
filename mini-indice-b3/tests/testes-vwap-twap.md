@@ -23,7 +23,7 @@ Os casos abaixo validam regras e cálculos. São fixtures sintéticas, não dado
 
 - Preços: 100000, 100010, 100005 pontos.
 - Quantidades: 10, 20, 10 contratos.
-- Soma ponderada: 3.000.250 pontos-contrato.
+- Soma ponderada: 4.000.250 pontos-contrato.
 - Quantidade total: 40 contratos.
 - Resultado: 100006,25 pontos.
 
