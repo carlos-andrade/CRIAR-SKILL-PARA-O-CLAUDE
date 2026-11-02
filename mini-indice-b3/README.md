@@ -5,7 +5,8 @@ Skill modular para análise do contrato futuro de mini Ibovespa (WIN), microestr
 ## Estrutura
 
 - `SKILL.md`: regras centrais e encaminhamento.
-- `references/`: conhecimento técnico por domínio.
+- `references/`: conhecimento técnico por domínio, incluindo especificação matemática VWAP/TWAP.
+- `workflows/calculo-vwap-twap.md`: procedimento reproduzível para cálculo e auditoria das referências.
 - `workflows/`: procedimentos reproduzíveis.
 - `tests/`: avaliações de comportamento e critérios de aceitação.
 
@@ -45,7 +46,7 @@ A Skill não fornece cotações por si só. A análise depende dos dados e ferra
 
 ## Validação
 
-Consulte `tests/casos-de-teste.md` e `tests/checklist-validacao.md`. A validação documental da estrutura não equivale a avaliação empírica do modelo Claude; testes reais devem ser executados no ambiente em que a Skill será instalada.
+Consulte `tests/casos-de-teste.md`, `tests/testes-vwap-twap.md` e `tests/checklist-validacao.md`. A validação documental da estrutura não equivale a avaliação empírica do modelo Claude; testes reais devem ser executados no ambiente em que a Skill será instalada.
 
 ## Fontes institucionais iniciais
 
