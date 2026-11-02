@@ -51,3 +51,18 @@
 - [ ] Testes quantitativos com dados reais, custos e consensos point-in-time.
 
 **Status:** módulo de contexto/regime especificado e documentado. Não há validação empírica de desempenho nem ligação a feed em tempo real.
+
+
+## Motor de decisão — versão 0.5.0
+
+- [x] Referência do motor de decisão criada.
+- [x] Workflow de cenários operacionais criado.
+- [x] Testes DE01–DE20 documentados.
+- [x] Gates de dados e risco/execução especificados.
+- [x] Dependências e prevenção de dupla contagem documentadas.
+- [x] Cenários comprador, vendedor e não operar definidos.
+- [ ] Executar DE01–DE20 em avaliação comportamental.
+- [ ] Validar quantitativamente com dados point-in-time e custos.
+- [ ] Testar instalação real em Claude Code e empacotamento para claude.ai.
+
+**Status:** motor especificado e documentado. Sem validação empírica de desempenho, calibração, feed em tempo real ou execução real.
