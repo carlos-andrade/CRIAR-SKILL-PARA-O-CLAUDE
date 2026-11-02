@@ -33,3 +33,13 @@
 - Workflow para calendário macro, consenso point-in-time, realizado, revisão e surpresa.
 - Regras para timezone, timestamps, dados stale e prevenção de look-ahead.
 - Matriz MR01–MR18 para contexto macro e regimes.
+
+
+## 0.5.0 — 2026-11-02
+
+- Motor de decisão com gates de integridade de dados e risco/execução.
+- Hierarquia de evidências e prevenção de dupla contagem entre variáveis dependentes.
+- Cenários condicionais comprador, vendedor e não operar.
+- Exigência de gatilho, invalidação, parâmetros confirmados e sizing auditável.
+- Workflow operacional e testes DE01–DE20.
+- Reforço de que não operar é decisão válida e backtest não equivale a execução real.
