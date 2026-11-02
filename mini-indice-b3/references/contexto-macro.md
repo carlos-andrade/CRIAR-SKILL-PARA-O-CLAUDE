@@ -1,36 +1,69 @@
-# IBOV, VIX e contexto macroeconómico
+# IBOV, VIX, VXBR e contexto macroeconómico
 
 ## IBOV e WIN
 
-IBOV é índice à vista de ações; WIN é contrato futuro. IBOV pode servir de referência contextual para direção e amplitude do mercado acionário brasileiro, mas não é média móvel do WIN nem substituto do preço negociado no contrato. Considerar basis, dividendos, custo de carregamento, composição e horários.
+IBOV é o índice à vista de ações da B3; WIN é contrato futuro. O Ibovespa resulta de uma carteira teórica de ações e units, com critérios de negociabilidade, ponderação e rebalanceamento definidos pela metodologia B3. WIN incorpora prazo, basis, custo de carregamento, dividendos esperados, expectativas e microestrutura própria.
 
-## VIX
+IBOV pode servir de referência contextual para direção e amplitude do mercado acionista brasileiro, mas não é média móvel do WIN nem substituto do preço negociado no contrato. Para comparação quantitativa, sincronizar timestamps e comparar retornos percentuais/logarítmicos, não variações brutas em pontos. Consultar `references/regimes-mercado.md` para basis, beta e correlação.
 
-VIX representa volatilidade implícita derivada de opções do S&P 500, com horizonte de aproximadamente 30 dias. É referência de expectativa de volatilidade do mercado acionário norte-americano, não medidor direto da volatilidade do WIN. Relações com ativos brasileiros variam por regime e horário.
+Fonte: B3 — https://www.b3.com.br/pt_br/market-data-e-indices/indices/indices-amplos/ibovespa.htm
 
-## Calendário económico
+## VIX Cboe e S&P/B3 Ibovespa VIX (VXBR)
 
-Para eventos, registar:
+Não usar “VIX” como designação genérica de volatilidade brasileira.
+
+- **Cboe VIX:** mede volatilidade implícita de aproximadamente 30 dias do S&P 500, calculada a partir de opções SPX. É uma referência externa de risco global, não volatilidade direta do WIN.
+- **S&P/B3 Ibovespa VIX (VXBR):** procura medir a volatilidade implícita de 30 dias do mercado acionista brasileiro, usando opções sobre o Ibovespa. É mais diretamente relacionado ao mercado brasileiro, mas não mede a volatilidade realizada do WIN.
+
+Ambos são medidas implícitas e anualizadas. Nível elevado não determina direção; nível baixo não elimina risco. Distinguir volatilidade implícita, realizada e amplitude observada. Não converter o nível de nenhum dos índices em pontos de WIN.
+
+Fontes:
+- Cboe VIX FAQ: https://www.cboe.com/tradable_products/vix/faqs
+- S&P/B3 Ibovespa VIX: https://www.spglobal.com/spdji/pt/indices/indicators/sp-b3-ibovespa-vix/
+- Metodologia VXBR: https://www.spglobal.com/spdji/pt/methodology/article/sp-b3-ibovespa-vix-methodology-portuguese/
+
+## Calendário económico e vintages
+
+Para cada evento, registar:
 - indicador, país e entidade responsável;
-- data/hora original e fuso;
-- consenso, realizado, anterior e revisão;
-- unidade, período de referência e fonte;
-- surpresa (realizado menos consenso, com convenção de sinal);
-- horário efetivo de divulgação e eventuais atrasos.
+- data/hora prevista e efetiva, timezone original e fonte;
+- período de referência e unidade;
+- consenso disponível antes da divulgação;
+- valor anterior e revisão;
+- valor realizado e timestamp de publicação;
+- surpresa simples e, quando possível, padronizada;
+- versão/snapshot da informação conhecida à hora da decisão.
 
-Eventos relevantes incluem decisões de juros, inflação, emprego, atividade, fiscal, dados externos e discursos oficiais. Distinguir calendário previsto de divulgação efetivamente ocorrida.
+Surpresa simples:
+`Surpresa = Realizado − Consenso`.
 
-## Interpretação
+A surpresa padronizada só é válida com distribuição histórica comparável e estimada sem informação futura. Não calcular quando consenso e realizado tiverem unidades/períodos diferentes.
 
-Não inferir direção do WIN apenas pelo sinal de um dado macro. Consenso, posicionamento, revisões, reação de juros/câmbio e preço já antecipado podem alterar a reação. No período próximo a evento, reduzir a confiança da leitura técnica quando a volatilidade/execução estiverem comprometidas.
+Não inferir direção do WIN apenas pelo sinal da surpresa. O significado depende do indicador, função de reação do banco central, posicionamento, revisões, expectativas já incorporadas e reação de juros/câmbio.
 
-## Fontes primárias sugeridas
+## Eventos relevantes
 
-- B3 para IBOV, derivativos e calendário de negociação.
-- Banco Central do Brasil para Copom, Selic, Focus e séries económicas.
-- IBGE para IPCA, PIB, emprego e atividade.
-- FGV para indicadores sob sua responsabilidade.
-- Cboe para metodologia e dados do VIX.
-- Entidades oficiais dos EUA para Fed, inflação, emprego e atividade.
+- **Banco Central do Brasil:** Copom, Selic, atas, Relatório de Política Monetária, Focus e comunicação oficial.
+- **IBGE:** IPCA, INPC, PIB, PNAD Contínua e indicadores de atividade.
+- **FGV:** indicadores sob responsabilidade da instituição.
+- **Estados Unidos:** Federal Reserve, inflação, emprego, PIB e atividade publicados pelos órgãos oficiais.
+- **Outros:** decisões fiscais, leilões, eventos geopolíticos e divulgações relevantes para commodities/câmbio.
 
-Consultar a fonte original e anotar data/hora/fuso; agregadores são apoio, não autoridade primária.
+Calendário previsto não prova que a divulgação ocorreu no horário anunciado. Confirmar publicação efetiva na fonte primária.
+
+Fontes institucionais:
+- BCB — Copom: https://www.bcb.gov.br/controleinflacao/copom
+- BCB — Focus: https://www.bcb.gov.br/controleinflacao/relatoriofocus
+- IBGE — calendário de divulgações: https://www.ibge.gov.br/calendario-de-divulgacoes-novoript
+
+O Focus resume expectativas reportadas ao Banco Central; não representa previsão ou compromisso do próprio BC. O calendário do IBGE é referência para datas oficiais, mas a hora efetiva deve ser confirmada na publicação.
+
+## Fuso horário
+
+Guardar timezone IANA, não apenas offset numérico. Para eventos brasileiros, usar `America/Sao_Paulo`; para séries norte-americanas, usar timezone da fonte (por exemplo, `America/New_York`). Converter para UTC para alinhamento computacional e preservar timestamp original. Considerar mudanças históricas de horário de verão.
+
+## Interpretação operacional
+
+Próximo de eventos, avaliar spread, profundidade, slippage, volatilidade e risco de gaps. A janela de cautela deve ser parametrizada e validada por evento/instrumento; não inventar um intervalo universal.
+
+O contexto macro altera a confiança e o risco da leitura técnica, não substitui gatilho, invalidação ou gestão de risco. Quando faltarem consenso point-in-time, timestamps ou fonte primária, declarar a limitação e não fabricar surpresa.
