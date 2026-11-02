@@ -35,3 +35,14 @@ Todos os casos são testes de especificação. A sua execução empírica requer
 - Execução comportamental no Claude: pendente.
 - Fixtures de mercado reais: não incluídas.
 - Testes de dados/algoritmos: dependem de implementações e datasets próprios.
+
+
+## Casos adicionais — fluxo e microestrutura
+
+Os casos detalhados FL01–FL14 estão em `tests/testes-fluxo-microestrutura.md`. Esta secção garante cobertura no conjunto geral:
+- cobertura por volume diferente da cobertura por negócios;
+- CVD com reset explícito e negócios sem agressor;
+- atividade elevada sem deslocamento sem inferência automática de absorção;
+- trades/segundo diferentes de contratos/segundo;
+- cancelamento de oferta L2 distinto de execução;
+- baseline inadequado e seleção retrospectiva de janela como falhas metodológicas.
