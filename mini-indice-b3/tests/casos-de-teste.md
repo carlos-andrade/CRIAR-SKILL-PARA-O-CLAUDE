@@ -45,3 +45,8 @@ Detalhes MR01–MR18 em `tests/testes-contexto-regime.md`. Cobrem distinção VI
 - Execução comportamental no Claude: pendente.
 - Fixtures reais e históricos point-in-time: não incluídos.
 - Testes de algoritmos dependem de implementação e datasets próprios.
+
+
+## Motor de decisão — DE01–DE20
+
+Os vinte casos detalhados em `testes-motor-decisao.md` verificam gates de dados e risco, dependência entre métricas, prevenção de dupla contagem, cenários condicionais, gatilhos, invalidação, execução e a decisão de não operar. Estão documentados; a execução comportamental no Claude continua pendente.
