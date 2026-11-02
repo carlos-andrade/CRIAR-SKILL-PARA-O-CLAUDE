@@ -68,3 +68,8 @@ A validação documental não equivale a avaliação empírica do modelo Claude.
 - [IBGE — Calendário de divulgações](https://www.ibge.gov.br/calendario-de-divulgacoes-novoript)
 
 Reconfirmar metodologias, calendários e parâmetros vigentes antes de uso operacional.
+
+
+## Motor de decisão — versão 0.5.0
+
+A camada decisória valida primeiro integridade dos dados e risco/execução. Em seguida constrói hipóteses compradora e vendedora separadas, regista evidências favoráveis e contrárias e agrupa métricas dependentes para evitar dupla contagem. A saída pode ser cenário condicional comprador, vendedor ou não operar. Consulte `references/motor-de-decisao.md`, `workflows/motor-cenarios-operacionais.md` e `tests/testes-motor-decisao.md`.
