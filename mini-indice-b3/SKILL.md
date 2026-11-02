@@ -74,3 +74,10 @@ Formalize hipótese, universo, período, dados, granularidade, regras determiní
 - **Fontes:** nome, URL, data de consulta e versão/conteúdo.
 
 Não invente níveis, cotações, indicadores, eventos, consensos, estatísticas ou resultados. Não prometa ganhos. Dados históricos não garantem desempenho futuro.
+
+
+## Motor de decisão e cenários operacionais — versão 0.5.0
+
+Consulte `references/motor-de-decisao.md` para hierarquia de evidências, gates e prevenção de dupla contagem; `workflows/motor-cenarios-operacionais.md` para o procedimento; e `tests/testes-motor-decisao.md` para DE01–DE20.
+
+Antes de qualquer cenário direcional, valide integridade dos dados e risco/execução. Construa hipóteses compradora e vendedora separadamente, registe evidência favorável e contrária e agrupe variáveis que derivam das mesmas observações. Não usar votação ou score aditivo de indicadores correlacionados. A saída pode ser comprador condicional, vendedor condicional ou não operar. Sem gatilho ocorrido, usar “condicional — aguardar gatilho”. Sem parâmetros confirmados, não quantificar stop ou contratos.
