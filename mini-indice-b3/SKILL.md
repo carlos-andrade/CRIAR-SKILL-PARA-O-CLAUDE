@@ -1,6 +1,6 @@
 ---
 name: mini-indice-b3
-description: Analisa o mini índice futuro WIN da B3, fluxo, microestrutura, VWAP/TWAP, delta, volume, FVG/ICT, contexto macro e risco. Use em perguntas sobre WIN, setups, execução ou backtests.
+description: Analisa o mini índice futuro WIN da B3, fluxo, microestrutura, VWAP/TWAP, Cumulative Delta, volume, absorção, FVG/ICT, contexto macro e risco. Use em perguntas sobre WIN, setups, execução ou backtests.
 ---
 
 # Mini Índice Futuro B3 (WIN)
@@ -22,10 +22,12 @@ Skill para análise verificável do contrato futuro de mini Ibovespa (WIN). O ob
 Consulte apenas o material necessário à tarefa:
 
 - Especificação, vencimento, rolagem e sessões: `references/contrato-win.md`.
-- Microestrutura, ticks, trades, agressão e limitações do feed: `references/microestrutura-fluxo.md`.
+- Microestrutura, classificação do agressor, spread, ritmo e atividade versus deslocamento: `references/microestrutura-fluxo.md`.
 - Definição matemática, janelas, dispersão, gap e validação de VWAP/TWAP: `references/vwap-twap.md` e `references/vwap-twap-especificacao-matematica.md`.
 - Procedimento reproduzível de cálculo: `workflows/calculo-vwap-twap.md`.
-- Delta, volume e atividade: `references/delta-volume.md`.
+- CVD, delta incremental, cobertura, volume e hipótese de absorção: `references/delta-volume.md`.
+- Workflow operacional de fluxo: `workflows/analise-fluxo-microestrutura.md`.
+- Testes de fluxo: `tests/testes-fluxo-microestrutura.md`.
 - Fair Value Gap e conceitos ICT: `references/fvg-ict.md`.
 - IBOV, VIX e calendário macro: `references/contexto-macro.md`.
 - Risco, dimensionamento e execução: `references/risco-execucao.md`.
@@ -43,11 +45,12 @@ Consulte apenas o material necessário à tarefa:
 3. **Contexto:** calendário económico, eventos, IBOV e VIX, sem confundir mercados ou unidades.
 4. **Preço:** estrutura, níveis observáveis, amplitude, volatilidade e reação do preço.
 5. **Referências temporais/preço:** calcular VWAP e TWAP em janelas alinhadas, com convenções explícitas; medir distância, inclinação, dispersão e gap.
-6. **Fluxo:** trades, agressão, delta, volume por contrato e financeiro, spread e ritmo.
-7. **Padrões:** FVG/ICT apenas com regras objetivas, contexto, mitigação e invalidação.
-8. **Cenários:** principal, alternativo e não operação; cada um com condições observáveis.
-9. **Risco:** gatilho condicional, invalidação, stop, objetivos, sizing somente com parâmetros confirmados, custos e riscos de execução.
-10. **Conclusão:** evidência favorável/contrária, incerteza, dados ausentes e o que mudaria a leitura.
+6. **Fluxo:** trades, agressão, CVD, delta incremental, volume classificado/não classificado, spread, profundidade e ritmo.
+7. **Atividade e deslocamento:** avaliar métricas numa janela definida e baseline comparável; tratar absorção como hipótese sujeita a confirmação posterior.
+8. **Padrões:** FVG/ICT apenas com regras objetivas, contexto, mitigação e invalidação.
+9. **Cenários:** principal, alternativo e não operação; cada um com condições observáveis.
+10. **Risco:** gatilho condicional, invalidação, stop, objetivos, sizing somente com parâmetros confirmados, custos e riscos de execução.
+11. **Conclusão:** evidência favorável/contrária, incerteza, dados ausentes e o que mudaria a leitura.
 
 Adapte a profundidade ao pedido. Uma pergunta conceitual não exige executar o fluxo completo.
 
