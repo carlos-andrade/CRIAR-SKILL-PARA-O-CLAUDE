@@ -1,5 +1,9 @@
 # VWAP, TWAP e gap VWAP–TWAP
 
+## Referência normativa interna
+
+As convenções detalhadas, exemplos numéricos, validações e regras de sensibilidade estão em `vwap-twap-especificacao-matematica.md`. Este ficheiro resume os conceitos. Em caso de divergência, rever ambos e manter uma única convenção explícita no cálculo.
+
 ## VWAP
 
 Para negócios i com preço p_i e volume/quantidade q_i numa janela definida:
