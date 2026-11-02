@@ -23,7 +23,8 @@ Consulte apenas o material necessário à tarefa:
 
 - Especificação, vencimento, rolagem e sessões: `references/contrato-win.md`.
 - Microestrutura, ticks, trades, agressão e limitações do feed: `references/microestrutura-fluxo.md`.
-- VWAP, TWAP e gap: `references/vwap-twap.md`.
+- Definição matemática, janelas, dispersão, gap e validação de VWAP/TWAP: `references/vwap-twap.md` e `references/vwap-twap-especificacao-matematica.md`.
+- Procedimento reproduzível de cálculo: `workflows/calculo-vwap-twap.md`.
 - Delta, volume e atividade: `references/delta-volume.md`.
 - Fair Value Gap e conceitos ICT: `references/fvg-ict.md`.
 - IBOV, VIX e calendário macro: `references/contexto-macro.md`.
@@ -32,7 +33,8 @@ Consulte apenas o material necessário à tarefa:
 - Termos e unidades: `references/glossario.md`.
 - Sequência de análise intradiária: `workflows/analise-intraday.md`.
 - Definição de setup e avaliação: `workflows/pesquisa-estrategia.md`.
-- Casos de comportamento: `tests/casos-de-teste.md`.
+- Testes de VWAP/TWAP: `tests/testes-vwap-twap.md`.
+- Casos de comportamento gerais: `tests/casos-de-teste.md`.
 
 ## Fluxo de análise completa
 
@@ -40,7 +42,7 @@ Consulte apenas o material necessário à tarefa:
 2. **Integridade:** verificar lacunas, duplicados, ordenação, valores impossíveis e qualidade da classificação de agressor.
 3. **Contexto:** calendário económico, eventos, IBOV e VIX, sem confundir mercados ou unidades.
 4. **Preço:** estrutura, níveis observáveis, amplitude, volatilidade e reação do preço.
-5. **Referências temporais/preço:** VWAP, TWAP, distância, inclinação e gap, com janela explícita.
+5. **Referências temporais/preço:** calcular VWAP e TWAP em janelas alinhadas, com convenções explícitas; medir distância, inclinação, dispersão e gap.
 6. **Fluxo:** trades, agressão, delta, volume por contrato e financeiro, spread e ritmo.
 7. **Padrões:** FVG/ICT apenas com regras objetivas, contexto, mitigação e invalidação.
 8. **Cenários:** principal, alternativo e não operação; cada um com condições observáveis.
@@ -57,6 +59,7 @@ Antes de avaliar uma estratégia, formalize hipótese, universo, período, dados
 
 - **Instrumento e dados:** o que foi analisado e qualidade dos dados.
 - **Factos observados:** valores e comportamentos diretamente verificáveis.
+- **Cálculos:** fórmula, unidade, janela, parâmetros e tratamento de dados.
 - **Interpretação:** inferências e hipóteses, com evidência favorável e contrária.
 - **Cenários:** principal, alternativo e não operação.
 - **Risco e invalidação:** condições que tornam a tese inválida.
